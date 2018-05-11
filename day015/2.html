@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>元字符</title>
+		<script type="text/javascript">
+			/**
+			元字符
+			[]：匹配其中的任何一个
+			*：前边单元出现0个或者任意个数
+			+：前边单元出现至少1个或者任意个数
+			?：前边单元出现0个或者1个
+			^：匹配字符串开始的位置
+			$：匹配字符串结束的位置
+			.：匹配除换行符\n之外的任何一个字符
+			{n}：匹配n个
+			{n,}：匹配至少n
+			{n,m}：匹配n到m个
+			\w:匹配所有数字、字母和下划线中的任何一个
+			\W：匹配所有非数字、字母和下划线的任何一个
+			\d：匹配所有数字中的任何一个
+			\D：匹配所有非数字的任何一个
+			*/
+			
+			// []:匹配其中的任意一个
+			var reg = /[4|6|7]/
+			var str = '6478967564'
+			
+			// * 前边字符(单元)至少出现0次或者任意次数
+			var reg = /LO*L/
+			var str = 'fgLOOOOOOOOOOOLNBXCJ'
+			var str = 'LOL'
+			var str = 'LiL'
+			
+			// +前边字符(单元)至少出现1次或者任意次数
+			var reg = /LO+L/
+			var str = 'vchdxvLOOOOOLNCVHD'
+			
+			//?：前边单元出现0个或者1个   
+			var reg = /LO?L/
+			var str = 'LOL'
+			
+			// ^：匹配字符串开始的位置
+			// $：匹配字符串结束的位置
+			var reg = /^Today is Saturday$/
+			var str = 'Today is Saturday'
+			
+			// .：匹配除换行符\n之外的任何一个字符
+			var reg = /.*/
+			var reg = /.+/
+			var str = 'ab\ncd'
+			
+			// {n}：匹配n个
+			var reg = /[0-9]{3}/
+			var str = '456787678'
+			
+			// {n,}：匹配至少n
+			// {n,m}：匹配n到m个
+			var reg = /[0-9]{4,}/
+			var str = '568768gyfu7yt'
+			var reg = /[0-9]{5,8}/
+			var str = 'bvhdsc56784566667vxguysc78bcd7'	
+			
+			// \w:匹配所有数字、字母和下划线中的任何一个
+			var reg = /\w+/
+			var reg = /\w*/
+			var str = '#bc678un_buh'
+			
+			// \W：匹配所有非数字、字母和下划线的任何一个
+			var reg = /\W*/
+			var reg = /\W+/
+			var str = 't#$%^&*()*&^%$'	
+	
+			// \d：匹配所有数字中的任何一个   [0-9] == \d   
+			// \D：匹配所有非数字的任何一个	
+			var reg = /\d+/
+			var reg = /\d*/
+			var reg = /\d?/
+			var reg = /\d{2}/
+			var reg = /\d{3,}/
+			var reg = /\d{3,5}/
+			var reg = /[0-9]*/
+			var str = 'd45676'		
+			
+			var res = str.match(reg);
+			console.log(res)
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

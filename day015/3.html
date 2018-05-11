@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>模式修饰符</title>
+		<script type="text/javascript">
+			/**
+			*
+			模式修饰符
+			? 加在限制符{*,+,?,{n},{n,},{n,m}}之后就构成了非贪婪匹配
+			\s：匹配换行符\n
+			i：不区分大小写
+			g:全局匹配
+			*/
+			var reg = /LO*?/
+			var reg = /LO+?/
+			var reg = /LO??/
+	
+			var str = 'LOOOOOOOOOOOOOL'
+	
+	
+			// \s：匹配换行符\n
+			var reg = /\s{2,4}/
+			var str = 'dgfhg\n\n\n\n\n'
+	
+	
+	
+			//i: 写在分隔符的外边, 表示不不区分大小写
+			//g: 写在分隔符的外边,全局匹配
+			var reg = /LOL/gi
+			var str = 'lollolollllllooolol'
+	
+			var res = str.match(reg);	
+			console.log(res)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

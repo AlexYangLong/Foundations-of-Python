@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>正则表达式的使用</title>
+		<script type="text/javascript">
+			//普通字符
+			// 在 / / 里边写的是正则表达式的规则
+			var reg = /abcdefg/
+			var str = 'fxszhvfxiabcsgfierhgrabc'	
+	
+			var reg = /LOL/
+			var str = 'vszfLOLSVBCDJXVLOL'
+	
+			var reg = /#%/
+			var str = 'Cvjhi@#%^'
+	
+			var reg = /123/
+			var str = 'fxyg123'	
+	
+			// match: 匹配文本信息,并且值匹配一次, 如果匹配成功则返回文本信息,如果匹配失败,则返回null
+			var res = str.match(reg);
+	
+			console.log(res)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
